@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - ALTHAF MALIK</title>
+    <style>
+        /* General styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0c032c4f;
+            color: #000000;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header styles */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #022b01;
+            color: #f0f0f0;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+
+        .header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .header nav a {
+            color: #f0f0f0;
+            margin: 0 1rem;
+            font-size: 1rem;
+        }
+
+        .header nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero section styles */
+        .hero-section {
+            padding: 4rem 2rem;
+            min-height: 100vh;
+            text-align: center;
+            background-color: #0a504b;
+            position: relative;
+            overflow: hidden;
+            margin-top: 4rem; /* Offset for fixed header */
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            animation: zoomIn 1.5s ease-in-out;
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+        }
+
+        .text-content {
+            max-width: 600px;
+            z-index: 1;
+        }
+
+        .title {
+            font-size: 3rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: #b0b0b0;
+            margin-bottom: 2rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            color: #ffffff;
+            background-color: #fb0303;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            animation: zoomIn 1s ease-out;
+        }
+
+        .cta-button:hover {
+            background-color: #4377af;
+        }
+        
+        /* Section styles */
+        .section {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .experience-card, .project-card {
+            background-color: #037919;
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: inline-block;
+            width: 300px;
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .experience-card:hover, .project-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .experience-card .more, .project-card .more {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 0.5rem;
+            text-align: center;
+        }
+
+        .experience-card:hover .more, .project-card:hover .more {
+            opacity: 1;
+        }
+
+        .skill-chip {
+            display: inline-block;
+            background-color: #14067c;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 15px;
+            margin: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.9);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">ALTHAF MALIK</div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+<a></a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+<section class="hero-section" style="display: flex; align-items: center; justify-content: space-between;">
+    
+    <div class="text-content" style="flex: 1;">
+        <h1 class="title">ALTHAF MALIK</h1>
+        <h2 class="subtitle">Software Developer </h2>
+        <a href="#contact" class="cta-button">Connect With Me</a>
+    </div>
+    
+    
+    <div class="s-intro__content-media" style="flex: 1; display: flex; justify-content: center;">
+        <div class="s-intro__content-media-inner" style="width: 500px; height: 700px; border-radius: 50px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+            <img src="intro-bg.jpg" srcset="images/intro-bg.jpg 1x, images/intro-bg@2x.jpg 2x" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+    </div>
+    
+    <style>
+        /* Animation: Zoom-in on page load */
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.9); /* Start slightly smaller */
+                opacity: 0;           /* Start with invisible image */
+            }
+            to {
+                transform: scale(1);  /* End with normal size */
+                opacity: 1;           /* Full visibility */
+            }
+        }
+    
+        .s-intro__content-media-inner {
+            animation: zoomIn 1.5s ease-in-out; /* Apply zoom-in animation */
+            transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth transition for hover */
+        }
+    
+        /* Hover effect: scale up the image and increase shadow */
+        .s-intro__content-media-inner:hover {
+            transform: scale(1.05); /* Slightly increase the size on hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add a deeper shadow on hover */
+        }
+    </style>
+    
+</section>
+
+    
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2 class="section-title">About Me</h2>
+        <div class="section-content">
+            <p>Hello, I'm ALTHAF MALIK, currently pursuing my Masters in Computer Applications at CUSAT </p>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <h2 class="section-title">Experience</h2>
+        <div class="section-content">
+            <div class="experience-card">
+                <h3>Customer service representative  E-care online solutions</h3>
+                <p>Fulfilled online application forms for diverse clients,demonstrating proficiency in various software applications.</p>
+                <div class="more">
+                    <p>Developed strong interpersonal and communication skills while interacting with clients of varying personalities and behaviors.</p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <h2 class="section-title">Skills</h2>
+        <div class="section-content">
+            <div class="skills">
+                <span class="skill-chip">Python</span>
+                <span class="skill-chip">Java</span>
+                <span class="skill-chip">C</span>
+                <span class="skill-chip">JavaScript</span>
+                <span class="skill-chip">HTML</span>
+                <span class="skill-chip">CSS</span>
+                <span class="skill-chip">Bootstrap</span>
+                <span class="skill-chip">MySQL</span>
+                <span class="skill-chip">MongoDB</span>
+                <span class="skill-chip">Git</span>
+                <span class="skill-chip">Visual Studio</span>
+                <span class="skill-chip">Android Studio</span>
+                <span class="skill-chip">VS Code</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2 class="section-title">Contact</h2>
+        <div class="section-content">
+            <p>For enquiries <br><a href="mailto:althaf12narikkuni@gmail.com" class="cta-button">Email</a></p>
+        </div>
+    </section>
+</body>
+</html>
